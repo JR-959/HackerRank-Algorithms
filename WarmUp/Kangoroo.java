@@ -32,10 +32,10 @@ YES
 Explanation 0
 
 The two kangaroos jump through the following sequence of locations:
+1. 0 -> 3 -> 6 -> 9 -> 12
+2. 4 -> 6 -> 8 -> 10 -> 12
 
-
-
-Thus, the kangaroos meet after  jumps and we print YES.
+Thus, the kangaroos meet after 4 jumps and we print YES.
 
 Sample Input 1
 
@@ -67,7 +67,7 @@ The second kangaroo has a starting location that is ahead (further to the right)
 	        if(v1>v2){
 	            double jumps = (x2-x1)/(1.0*(v1-v2)); // multiplication in denominator (1.0) is needed to make sure that our result for jump is double
 	            //System.out.println(jumps%1);
-	            if(jumps%1 == 0)
+	            if(jumps%1 == 0)		// checking if the jumps is a whole number 
 	                return "YES";
 	        }
 	        return "NO";
