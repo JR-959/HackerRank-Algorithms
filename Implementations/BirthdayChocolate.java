@@ -32,7 +32,7 @@ Sample Output 1:
 0
 
 Explanation 1: 
-Lily only wants to give Ron  consecutive squares of chocolate whose integers sum to . 
+Lily only wants to give Ron 2 consecutive squares of chocolate whose integers sum to 3. 
 There are no possible pieces satisfying these constraints.
  */
 
