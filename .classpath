@@ -4,5 +4,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="WarmUp"/>
 	<classpathentry kind="src" path="Implementations"/>
+	<classpathentry kind="src" path="Strings"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
