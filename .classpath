@@ -6,5 +6,6 @@
 	<classpathentry kind="src" path="Implementations"/>
 	<classpathentry kind="src" path="Strings"/>
 	<classpathentry kind="src" path="Sorting"/>
+	<classpathentry kind="src" path="Arrays"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
