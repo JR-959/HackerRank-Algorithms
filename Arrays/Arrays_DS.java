@@ -33,6 +33,7 @@ Sample Output
 import java.io.*;
 import java.util.*;
 
+
 public class Arrays_DS {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
