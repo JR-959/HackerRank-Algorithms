@@ -36,41 +36,40 @@ Lily only wants to give Ron 2 consecutive squares of chocolate whose integers su
 There are no possible pieces satisfying these constraints.
  */
 
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
-	import java.io.*;
-	import java.util.*;
-	import java.text.*;
-	import java.math.*;
-	import java.util.regex.*;
+public class BirthdayChocolate {
 
-	public class BirthdayChocolate {
+	static int solve(int n, int[] s, int d, int m) {
+		// Complete this function
+		int count = 0;
+		
+		for (int i = 0; i <= n - m; i++) {
+			int sum = 0;
+			for (int j = i; j < i + m; j++)
+				sum += s[j];
 
-	    static int solve(int n, int[] s, int d, int m){
-	        // Complete this function
-	        int count =0;
-	        for(int i=0; i<= n-m; i++)
-	        {
-	            int sum =0;
-	            for(int j=i;j<i+m; j++)
-	                sum+=s[j];
-	            
-	            if(sum == d)
-	                count++;
-	        }
-	        
-	        return count;
-	    }
+			if (sum == d)
+				count++;
+		}//end of outer for loop
 
-	    public static void main(String[] args) {
-	        Scanner in = new Scanner(System.in);
-	        int n = in.nextInt();
-	        int[] s = new int[n];
-	        for(int s_i=0; s_i < n; s_i++){
-	            s[s_i] = in.nextInt();
-	        }
-	        int d = in.nextInt();
-	        int m = in.nextInt();
-	        int result = solve(n, s, d, m);
-	        System.out.println(result);
-	    }
+		return count;
 	}
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int[] s = new int[n];
+		for (int s_i = 0; s_i < n; s_i++) {
+			s[s_i] = in.nextInt();
+		}
+		int d = in.nextInt();
+		int m = in.nextInt();
+		int result = solve(n, s, d, m);
+		System.out.println(result);
+	}//end of main 
+}
