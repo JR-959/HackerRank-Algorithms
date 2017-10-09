@@ -32,50 +32,45 @@ As you can see, the minimal sum is 10 and the maximal sum is 14. Thus, we print 
 Hints: Beware of integer overflow! Use 64-bit Integer.
  */
 
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
-	import java.io.*;
-	import java.util.*;
-	import java.text.*;
-	import java.math.*;
-	import java.util.regex.*;
+public class MinMax_Sum {
 
-	public class MinMax_Sum {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		long[] arr = new long[5];
+		for (int arr_i = 0; arr_i < 5; arr_i++) {
+			arr[arr_i] = in.nextLong();
+		}
+		long[] sorted = selectionSort(arr);
+		long min = sorted[0] + sorted[1] + sorted[2] + sorted[3];
+		long max = sorted[4] + sorted[1] + sorted[2] + sorted[3];
+		System.out.println(min + " " + max);
 
-	    public static void main(String[] args) {
-	        Scanner in = new Scanner(System.in);
-	        long[] arr = new long[5];
-	        for(int arr_i=0; arr_i < 5; arr_i++){
-	            arr[arr_i] = in.nextLong();
-	        }
-	        long[] sorted = selectionSort(arr);
-	        long min = sorted[0] + sorted[1] + sorted[2] + sorted[3];
-	        long max = sorted[4] + sorted[1] + sorted[2] + sorted[3];
-	        System.out.println(min + " " + max);
-	        
-	    }
-	    
-	    public static long[] selectionSort(long []a)
-	    {
-	        for(int i=0; i<a.length;i++)
-	        {
-	           // System.out.println("i: " + i);
-	            int minimum = i;
-
-	            for(int j =i+1; j < a.length;j++){      //Inner Loop
-	             //   System.out.println("j: " + j);
-	                if(a[j] < a[minimum]) {
-	                    minimum = j;
-	                }
-
-	            }// end of inner loop
-
-	            long temp = a[i];
-	            a[i] = a[minimum];
-	            a[minimum] = temp;
-	        }// end of the outer loop
-	        
-	        return a;
-	    }
 	}
 
+	public static long[] selectionSort(long[] a) {
+		for (int i = 0; i < a.length; i++) {
+			// System.out.println("i: " + i);
+			int minimum = i;
 
+			for (int j = i + 1; j < a.length; j++) { // Inner Loop
+				// System.out.println("j: " + j);
+				if (a[j] < a[minimum]) {
+					minimum = j;
+				}
+
+			} // end of inner loop
+
+			long temp = a[i];
+			a[i] = a[minimum];
+			a[minimum] = temp;
+		} // end of the outer loop
+
+		return a;
+	}
+}

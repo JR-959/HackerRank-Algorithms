@@ -1,3 +1,4 @@
+
 /*
   Steve has a string, "s", consisting of "n" lowercase English alphabetic letters.
   In one operation, he can delete any pair of adjacent letters with same value. 
@@ -63,34 +64,31 @@ aa → Empty String
 Thus, we print Empty String.
  */
 
-	import java.io.*;
-	import java.util.*;
-	import java.text.*;
-	import java.math.*;
-	import java.util.regex.*;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
-	public class SuperReducedString {
+public class SuperReducedString {
 
-	    static String super_reduced_string(String s){
-	        // Complete this function
-	       String ready = s;
-	        if(s.length() == 0)
-	            return "Empty String";
-	        for(int i=0; i< s.length(); i++)
-	        {
-	            if(s.length() > i+1 && s.charAt(i) == s.charAt(i+1) )
-	                return super_reduced_string(s.substring(0,i) + s.substring(i+2));
-	        }
+	static String super_reduced_string(String s) {
+		// Complete this function
+		String ready = s;
+		if (s.length() == 0)
+			return "Empty String";
+		for (int i = 0; i < s.length(); i++) {
+			if (s.length() > i + 1 && s.charAt(i) == s.charAt(i + 1))
+				return super_reduced_string(s.substring(0, i) + s.substring(i + 2));
+		}
 
-	        return s;
-	    }
-
-	    public static void main(String[] args) {
-	        Scanner in = new Scanner(System.in);
-	        String s = in.next();
-	        String result = super_reduced_string(s);
-	        System.out.println(result);
-	    }
+		return s;
 	}
 
-
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String s = in.next();
+		String result = super_reduced_string(s);
+		System.out.println(result);
+	}
+}

@@ -1,3 +1,4 @@
+
 /*
 This is a simple challenge to get things started. Given a sorted array (ar) and a number
 (V), can you print the index location of "V" in the array?
@@ -38,25 +39,27 @@ Explanation:
 V = 4. The value 4 is the 2nd element in the array, but its index is 1 since array indices start from 0, so the answer is 1.
  */
 
-	import java.io.*;
-	import java.util.*;
+import java.io.*;
+import java.util.*;
 
-	public class IntrChallenge {
+public class IntrChallenge {
 
-	    public static void main(String[] args) {
-	        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-	        
-	        Scanner scan = new Scanner(System.in);
-	        int v = scan.nextInt();
-	        int size = scan.nextInt();
-	        int arr[] = new int[size];
-	        //Fill out the array
-	        for(int i=0; i< size; i++)
-	        {
-	            arr[i] = scan.nextInt();
-	            if(arr[i] == v)
-	                System.out.println(i);
-	        }
-	        
-	    }
+	public static void main(String[] args) {
+		/*
+		 * Enter your code here. Read input from STDIN. Print output to STDOUT. Your
+		 * class should be named Solution.
+		 */
+
+		Scanner scan = new Scanner(System.in);
+		int v = scan.nextInt();
+		int size = scan.nextInt();
+		int arr[] = new int[size];
+		// Fill out the array
+		for (int i = 0; i < size; i++) {
+			arr[i] = scan.nextInt();
+			if (arr[i] == v)
+				System.out.println(i);
+		}
+
 	}
+}

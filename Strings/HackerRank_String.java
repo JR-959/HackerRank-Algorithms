@@ -1,3 +1,4 @@
+
 /*
 We say that a string,"s" , contains the word hackerrank if a subsequence of the 
 characters in "s" spell the word "hackerrank". For example, "haacckkerrannkk" 
@@ -40,36 +41,32 @@ hackerrank, we print YES on a new line.
 2. s = hacker-wo-r-ld does not contain the last three characters of hackerrank, so we print NO on a new line.
  */
 
-	import java.io.*;
-	import java.util.*;
-	import java.text.*;
-	import java.math.*;
-	import java.util.regex.*;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
-	public class HackerRank_String {
+public class HackerRank_String {
 
-	    public static void main(String[] args) {
-	        Scanner in = new Scanner(System.in);
-	        int q = in.nextInt();
-	        for(int a0 = 0; a0 < q; a0++){
-	            String s = in.next();
-	            // your code goes here
-	            int j=0;
-	            String hackerRank = "hackerrank";
-	            for(int i=0; i< s.length(); i++)
-	            {
-	                if(j< hackerRank.length() && s.charAt(i) == hackerRank.charAt(j) )
-	                {
-	                    j++;
-	                }
-	            }
-	            
-	            if(j == hackerRank.length())
-	                System.out.println("YES");
-	            else
-	                System.out.println("NO");
-	        }
-	    }
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int q = in.nextInt();
+		for (int a0 = 0; a0 < q; a0++) {
+			String s = in.next();
+			// your code goes here
+			int j = 0;
+			String hackerRank = "hackerrank";
+			for (int i = 0; i < s.length(); i++) {
+				if (j < hackerRank.length() && s.charAt(i) == hackerRank.charAt(j)) {
+					j++;
+				}
+			}
+
+			if (j == hackerRank.length())
+				System.out.println("YES");
+			else
+				System.out.println("NO");
+		}
 	}
-
-
+}

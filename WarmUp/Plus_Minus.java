@@ -30,41 +30,36 @@ There are 3 positive numbers, 2 negative numbers, and 1 zero in the array.
 The respective fractions of positive numbers, negative numbers and zeroes are (3/6) = 0.500000 , (2/6) = 0.333333  and (1/6) = 0.166667, respectively.
  */
 
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
+public class Plus_Minus {
 
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int arr[] = new int[n];
 
-	import java.io.*;
-	import java.util.*;
-	import java.text.*;
-	import java.math.*;
-	import java.util.regex.*;
+		float positive = 0;
+		float negative = 0;
+		float zeros = 0;
 
-	public class Plus_Minus {
+		for (int arr_i = 0; arr_i < n; arr_i++) {
+			arr[arr_i] = in.nextInt();
+			if (arr[arr_i] > 0)
+				positive++;
+			else if (arr[arr_i] < 0)
+				negative++;
+			else
+				zeros++;
+		}
 
-	    public static void main(String[] args) {
-	        Scanner in = new Scanner(System.in);
-	        int n = in.nextInt();
-	        int arr[] = new int[n];
-	        
-	        float positive = 0;
-	        float negative = 0;
-	        float zeros = 0;
-	        
-	        for(int arr_i=0; arr_i < n; arr_i++){
-	            arr[arr_i] = in.nextInt();
-	            if(arr[arr_i]>0)
-	                positive++;
-	            else if(arr[arr_i]<0)
-	                negative++;
-	            else
-	                zeros++;
-	        }
-	        
-	        System.out.printf("%.6f \n", (positive/n));
-	        System.out.printf("%.6f \n", (negative/n));
-	        System.out.printf("%.6f \n", (zeros/n));
-	        
-	    }
+		System.out.printf("%.6f \n", (positive / n));
+		System.out.printf("%.6f \n", (negative / n));
+		System.out.printf("%.6f \n", (zeros / n));
+
 	}
-
-
+}
