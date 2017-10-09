@@ -1,3 +1,4 @@
+
 /*
 An array is a type of data structure that stores elements of the same type in a contiguous 
 block of memory. In an array, "A", of size "N", each memory location has some unique index,
@@ -35,21 +36,19 @@ import java.util.*;
 
 public class Arrays_DS {
 	public static void main(String[] args) {
-	    Scanner scan = new Scanner(System.in);
-	    int numArg = scan.nextInt();
-	    int arr[] = new int[numArg];
-	        
-	    //Fills out the array
-	    for(int i=0; i< numArg; i++)
-	    {
-	    		arr[i] = scan.nextInt();
-	    }
-	        
-	    //Outputs the arrays in reverse order
-	    for(int i=arr.length-1; i >= 0; i--)
-	    {
-	       System.out.print(arr[i] + " ");
-	    }//end of for loop
-	    
+		Scanner scan = new Scanner(System.in);
+		int numArg = scan.nextInt();
+		int arr[] = new int[numArg];
+
+		// Fills out the array
+		for (int i = 0; i < numArg; i++) {
+			arr[i] = scan.nextInt();
+		}
+
+		// Outputs the arrays in reverse order
+		for (int i = arr.length - 1; i >= 0; i--) {
+			System.out.print(arr[i] + " ");
+		} // end of for loop
+
 	}// end of main
 }
