@@ -35,7 +35,7 @@ import java.util.*;
 
 public class Arrays_DS {
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	    Scanner scan = new Scanner(System.in);
 	    int numArg = scan.nextInt();
 	    int arr[] = new int[numArg];
 	        
@@ -45,7 +45,7 @@ public class Arrays_DS {
 	    		arr[i] = scan.nextInt();
 	    }
 	        
-	    //Outputs the arrays in reverse  order
+	    //Outputs the arrays in reverse order
 	    for(int i=arr.length-1; i >= 0; i--)
 	    {
 	       System.out.print(arr[i] + " ");
