@@ -80,5 +80,4 @@ public class InsertionSortPart1 {
 		}
 		System.out.println("");
 	}
-
 }
