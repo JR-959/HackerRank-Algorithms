@@ -54,15 +54,16 @@ public class HackerRank_String {
 		int q = in.nextInt();
 		for (int a0 = 0; a0 < q; a0++) {
 			String s = in.next();
-			// your code goes here
-			int j = 0;
+			
+			int j = 0;	//keeps track of the letter index of the word "hackerrank"
 			String hackerRank = "hackerrank";
 			for (int i = 0; i < s.length(); i++) {
 				if (j < hackerRank.length() && s.charAt(i) == hackerRank.charAt(j)) {
 					j++;
 				}
 			}
-
+			
+			//checks if all the letters of the word "hackerrank" have occured in the word given
 			if (j == hackerRank.length())
 				System.out.println("YES");
 			else
