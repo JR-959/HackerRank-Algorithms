@@ -1,12 +1,12 @@
 
 /*
-  Steve has a string, "s", consisting of "n" lowercase English alphabetic letters.
-  In one operation, he can delete any pair of adjacent letters with same value. 
-  For example, string "aabcc" would become either "aab" or "bcc" after operation.
+Steve has a string, "s", consisting of "n" lowercase English alphabetic letters.
+In one operation, he can delete any pair of adjacent letters with same value. 
+For example, string "aabcc" would become either "aab" or "bcc" after operation.
 
-  Steve wants to reduce "s" as much as possible. To do this, he will repeat the above 
-  operation as many times as it can be performed. Help Steve out by finding and 
-  printing "s"'s non-reducible form!
+Steve wants to reduce "s" as much as possible. To do this, he will repeat the above 
+operation as many times as it can be performed. Help Steve out by finding and 
+printing "s"'s non-reducible form!
 
 Note: If the final string is empty, print "Empty String" .
 
@@ -77,7 +77,10 @@ public class SuperReducedString {
 		String ready = s;
 		if (s.length() == 0)
 			return "Empty String";
+		
 		for (int i = 0; i < s.length(); i++) {
+			
+			//deletes any pair of adjacent letters with same value
 			if (s.length() > i + 1 && s.charAt(i) == s.charAt(i + 1))
 				return super_reduced_string(s.substring(0, i) + s.substring(i + 2));
 		}
