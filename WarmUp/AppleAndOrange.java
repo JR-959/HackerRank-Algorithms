@@ -46,6 +46,7 @@ public class AppleAndOrange {
 		int m = in.nextInt();
 		int n = in.nextInt();
 		int[] apple = new int[m];
+		
 		// My code
 		int countA = 0;
 		int countO = 0;
