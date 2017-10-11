@@ -48,11 +48,15 @@ public class BirthdayChocolate {
 		// Complete this function
 		int count = 0;
 		
+		//outer FOR-loop: loop until the last possible sequence
 		for (int i = 0; i <= n - m; i++) {
 			int sum = 0;
-			for (int j = i; j < i + m; j++)
+			
+			//check the sequence of m consecutive squares starting from i
+			for (int j = i; j < i + m; j++)	
 				sum += s[j];
-
+			
+			//add to the number of possible ways to split the chocolate
 			if (sum == d)
 				count++;
 		}//end of outer for loop
