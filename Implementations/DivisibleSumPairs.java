@@ -44,8 +44,9 @@ import java.util.regex.*;
 public class DivisibleSumPairs {
 
 	static int divisibleSumPairs(int n, int k, int[] ar) {
-		int count = 0; // keeps track of pairs divisible by "k"
-
+		int count = 0; // keeps track of the number of pairs divisible by "k"
+		
+		//loops through the possible combination scenarios
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
 				if ((i != j && i < j) && ((ar[i] + ar[j]) % k) == 0)
