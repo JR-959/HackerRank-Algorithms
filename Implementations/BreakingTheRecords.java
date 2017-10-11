@@ -42,12 +42,12 @@ import java.util.regex.*;
 public class BreakingTheRecords {
 
 	static int[] getRecord(int[] s) {
-		// Complete this function
-		int highestRecord = s[0]; // updates the newest HIGHEST SCORED record
-		int highCount = 0; // keeps track of the number of times the highest record was beaten
-		int lowestRecord = s[0]; // updates the newest LOWEST SCORED record
-		int lowCount = 0; // keeps track of the number of times the lowest record was beaten
+		int highestRecord = s[0];  // updates the newest HIGHEST SCORED record
+		int highCount = 0; 		  // keeps track of the number of times the highest record was beaten
+		int lowestRecord = s[0];  // updates the newest LOWEST SCORED record
+		int lowCount = 0; 		 // keeps track of the number of times the lowest record was beaten
 
+		//Simple loop that goes through the array of scores and updates the lowCount and highCount values 
 		for (int i = 1; i < s.length; i++) {
 			if (s[i] < lowestRecord) {
 				lowestRecord = s[i];
@@ -57,7 +57,8 @@ public class BreakingTheRecords {
 				highestRecord = s[i];
 				highCount++;
 			}
-		} // end of loop
+		} // end of FOR loop
+		
 		int results[] = { highCount, lowCount };
 
 		return results;
