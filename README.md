@@ -1,6 +1,6 @@
 # Java-Algorithms-HackerRank-MySolutions-
 
-The following repository contains my own solutions of the coding challenges
+The following repository contains my solutions for the coding challenges
 from HackerRank.com/Interviewstreet.com. 
 
 ## What is HackerRank?
